@@ -11,7 +11,12 @@
                     Guest!
                 @endif
             </p>
-            <span class="text-sm font-thin">this is the Home Screen speaking..</span>
+            <span class="text-sm font-thin">This is the Home Screen..</span>
+
+            <div class="flex-col space-between items-center">
+                <div class="w-2/4 h-2/4 bg-gray-100 shadow-md rounded-md m-8"></div>
+                <span class="text-md text-gray-500">Please login or register to see more content.</span>
+            </div>
         </div>
     </div>
 @endsection

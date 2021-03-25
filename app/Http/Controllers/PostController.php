@@ -11,8 +11,8 @@ class PostController extends Controller
     public function __construct() {
         $this->middleware(['auth'])->only('store', 'destroy');
     }
-    public function index() {
-        
+
+    public function index() {        
         // gets all posts.
         //$posts = Post::get();
         $posts = Post::orderBy('created_at', 'desc')->orderBy('user_id', 'desc')->with(['user', 'likes'])->paginate(20);
@@ -26,7 +26,7 @@ class PostController extends Controller
             'body' => 'required'
         ]);
 
-        // store in db from elocuent relation.
+        // store in db, load Post class from elocuent relation.
         auth()->user()->posts()->create([
             'body' => $request->body
         ]);

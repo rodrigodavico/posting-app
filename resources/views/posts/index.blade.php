@@ -3,6 +3,7 @@
 @section('content')
     <div class="flex justify-center">
         <div class="w-8/12 bg-white p-6 rounded-lg">
+            <p class="text-xl font-bolder text-gray-600 mb-6">Posts</p>
             @auth
             <form action="{{ route('posts') }}" method="post" class="mb-4">
                 @csrf

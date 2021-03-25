@@ -17,7 +17,7 @@
                     
                     @auth
                         <li class="p-6">
-                            <a href="{{ route('dashboard') }}">Dashboard</a>
+                            <a href="{{ route('tasks') }}">Tasks</a>
                         </li>    
                     @endauth
                     

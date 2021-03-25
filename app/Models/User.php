@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\Task;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -42,6 +43,7 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    // elocuent relation to posts.
     public function posts() {
         return $this->hasMany(Post::class);
     }
@@ -54,5 +56,10 @@ class User extends Authenticatable
     // elocuent relation to received likes.
     public function receivedLikes() {
         return $this->hasManyThrough(Like::class, Post::class);
+    }
+
+    // elocuent relation to tasks
+    public function tasks() {
+        return $this->hasMany(Task::class);
     }
 }

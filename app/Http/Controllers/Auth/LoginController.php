@@ -29,6 +29,6 @@ class LoginController extends Controller
             return back()->with('login_invalid', 'User or Password incorrect');
         }
 
-        return redirect()->route('dashboard');
+        return redirect()->route('home');
     }
 }

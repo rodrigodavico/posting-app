@@ -31,7 +31,10 @@
                     
                     @auth
                         <li class="p-6">
-                            <a href="{{ route('profile') }}">{{auth()->user()->name}}</a>
+                            <a href="{{ route('profile') }}">
+                                <img src="/pics/{{auth()->user()->id}}.jpg" alt="profile-picture" class="w-8 y-8 mr-2 rounded-full inline">
+                                {{auth()->user()->name}}
+                            </a>
                         </li>
                         <li class="p-6">
                             <form action="{{ route('logout') }}" method="post" class="inline p-3">

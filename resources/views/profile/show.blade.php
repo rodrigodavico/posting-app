@@ -25,9 +25,9 @@
                 <span class="pl-2 text-blue-400 font-medium">{{ auth()->user()->email }}</span>
             </div>
 
-            <div class="mb-4 bg-gray-100 border-2 w-full p-4 rounded-lg">
-                <label for="username" class="text-gray-600 text-md">Username:</label>
-                <span class="pl-2 text-gray-600 font-medium">{{ auth()->user()->username }}</span>
+            <div class="my-2">
+                <a href="{{ route('profile.edit') }}" class="bg-gray-200 text-black px-6 py-2 rounded
+                font-medium">Edit</a>
             </div>
         </div>
     </div>

@@ -34,7 +34,10 @@ Route::delete('/tasks/{task}', [TaskController::class, 'destroy'])->name('tasks.
 
 
 Route::get('/profile', [ProfileController::class, 'show'])->name('profile');
-
+Route::get('/profile.edit', function() {
+    return view('profile.edit');
+})->name('profile.edit');
+Route::post('/profile', [ProfileController::class, 'update'])->name('profile.update');
 
 Route::post('/posts/{post}/like', [PostLikeController::class, 'store'])->name('/posts.like');
 Route::delete('/posts/{post}/unlike', [PostLikeController::class, 'destroy'])->name('/posts.unlike');

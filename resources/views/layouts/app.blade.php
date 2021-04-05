@@ -32,7 +32,7 @@
                     @auth
                         <li class="p-6">
                             <a href="{{ route('profile') }}">
-                                <img src="/pics/{{auth()->user()->id}}.jpg" alt="profile-picture" class="w-8 y-8 mr-2 rounded-full inline">
+                                <img src="{{ isset(auth()->user()->avatar) ? asset('storage/' . auth()->user()->avatar) : asset('storage/user-avatar.png') }}" alt="profile-picture" class="w-8 y-8 mr-2 rounded-full inline">
                                 {{auth()->user()->name}}
                             </a>
                         </li>

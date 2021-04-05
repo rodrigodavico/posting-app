@@ -6,8 +6,7 @@
             <h2 class="text-center text-xl mb-6">User Profile</h2>
             
             <div class="w-100 bg-gray-100 border-2 self-start my-4 p-4 rounded-lg flex">
-                <img src="/pics/{{auth()->user()->id}}.jpg" alt="" onclick="{{-- route('profile.change_pic') --}}" class="w-100 y-100 mx-6 rounded-full">
-                <button class="mx-10 p-2 self-center border">Change Pic</button>
+                <img src="{{ isset(auth()->user()->avatar) ? asset('storage/' . auth()->user()->avatar) : asset('storage/user-avatar.png') }}" alt="" class="w-3/4 mx-6 rounded-full">
             </div>
             
             <div class="mb-4 bg-gray-100 border-2 w-full p-4 rounded-lg">
